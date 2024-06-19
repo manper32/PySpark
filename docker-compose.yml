@@ -1,0 +1,9 @@
+services:
+  jupyter-notebook-service:
+    container_name: jupyter-notebook-container
+    image: jupyter/pyspark-notebook:ubuntu-18.04
+    volumes:
+      - "./scripts/sparkdata:/sparkdata"
+      - "./scripts/work:/home/jovyan/work"
+    ports:
+      - "8888:8888"
